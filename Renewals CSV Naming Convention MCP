@@ -1,0 +1,66 @@
+# Master Context Protocol (MCP) Document
+
+## Title:
+Renewals CSV Naming Convention MCP
+
+---
+
+### 1. Purpose
+To establish a standardized naming convention for renewal CSV files when the **Renewal flag is checked**, ensuring consistency, clarity, and ease of identification across systems and teams.
+
+---
+
+### 2. Scope
+- Applies **only to Renewals** where the Renewal flag is set to `true`.  
+- Enrollment logic is **out of scope for MVP** and will be defined later.
+
+---
+
+### 3. Protocol Definition
+**File Naming Format:**  
+```
+STATE RM Renewal COMPANY NAME [and COMPANY NAME ...] mm_dd_yy.csv
+```
+
+---
+
+### 4. Components
+- **STATE:** Two-letter state abbreviation (e.g., TX).  
+- **Billing System:** Always `RM`.  
+- **Transaction Type:** Always `Renewal` (only if Renewal flag is checked).  
+- **Company Name(s):**  
+  - Single premise: One company name.  
+  - Multi-premise: Multiple company names separated by `and`.  
+- **Date:** Format `mm_dd_yy`.  
+- **Extension:** `.csv`.
+
+---
+
+### 5. Examples
+- **Single Premise Renewal:**  
+```
+TX RM Renewal Jose's Pepper Company 01_07_25.csv
+```
+
+- **Multi-Premise Renewal:**  
+```
+TX RM Renewal Jose's Pepper Company and Stacys Donuts and Ashwith's Comfy Pillow 01_07_25.csv
+```
+
+---
+
+### 6. Compliance
+- All renewal CSV files must follow this naming convention before submission or upload.
+- Files not adhering to this protocol will be rejected and require renaming.
+
+---
+
+### 7. Exceptions
+- Enrollment transactions are excluded until logic is defined in future phases.
+
+---
+
+### 8. Revision History
+| Version | Date       | Author        | Changes Made        |
+|---------|-----------|--------------|----------------------|
+| 1.0     | 01/07/2026 | Jose Vasquez | Initial MCP created |
